@@ -1,0 +1,25 @@
+<div class="container-fluid">
+
+    <h1>Tous nos livres</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let book of books">
+                <td>
+                    <a [routerLink]="['books', book.id]">{{book.title}}</a>
+                    <!-- <a [routerLink]="['/books', book.id]">{{ book.id }} - {{ book.title }}</a> -->
+                </td>
+                <td>{{ book.price }} €</td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+</div>

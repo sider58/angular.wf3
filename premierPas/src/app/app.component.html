@@ -1,0 +1,16 @@
+<h1>{{ title }}</h1>
+
+<hr>
+
+<input type="text" [(ngModel)]="item">
+<button type="button" (click)="addtoList()">Ajouter</button>
+<hr>
+
+{{ item }}
+
+<ul>
+    <li *ngFor="let anItem of itemsList; let i=index">
+        {{ i }}  :  {{ anItem }}
+        <button type="button" (click)="removeFromList(i)">x</button>
+    </li>
+</ul>
